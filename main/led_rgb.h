@@ -14,8 +14,8 @@
 
 void rgbInit();
 //int int int rgbStateRead();
-void rgbWhite( unsigned int blanco );
-void rgbUpdate( unsigned int rojo, unsigned int verde, unsigned int azul );
+void rgbWhite( int blanco );
+void rgbUpdate( int rojo, int verde, int azul );
 void rgbLedOn ();
 void rgbLedOff ();
 

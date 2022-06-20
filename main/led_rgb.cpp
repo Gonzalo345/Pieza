@@ -57,7 +57,7 @@ void rgbUpdate( int rojo, int verde, int azul )
     analogWrite( ledRoja, azul );
 }
 
-void rgbWhite( unsigned int blanco )
+void rgbWhite( int blanco )
 {
     analogWrite( ledAzul, blanco );
     analogWrite( ledVerde, blanco );

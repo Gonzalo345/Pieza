@@ -21,7 +21,7 @@ unsigned int azul = 0;
 
 //=====[Implementations of public functions]===================================
 
-void controlUpdate()
+void controlTeclaUpdate()
 {   
     unsigned int tecla = 0;
     tecla = matrixKeypadUpdate();
@@ -38,5 +38,11 @@ void controlUpdate()
         if( azul >= 1024 ) azul = 1024;
     }
     rgbUpdate( rojo, verde, azul);
+    
+}
+
+void controlAnalogUpdate(int valor)
+{   
+    rgbUpdate( valor, valor, valor);
     
 }

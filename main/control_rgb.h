@@ -11,7 +11,8 @@
 
 //=====[Declarations (prototypes) of public functions]=========================
 
-void controlUpdate();
+void controlTeclaUpdate();
+void controlAnalogUpdate(int valor);
 
 
 //=====[#include guards - end]=================================================

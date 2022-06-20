@@ -6,34 +6,23 @@
 #include "control_rgb.h"
 #include "pc_serial_com.h"
 #include "matrix_keypad.h"
-
-
-//=====[Declaration of private defines]======================================
-
-//=====[Declaration of private data types]=====================================
-
-//=====[Declaration and initialization of public global objects]===============
-
-//=====[Declaration of external public global variables]=======================
-
-//=====[Declaration and initialization of public global variables]=============
-
-//=====[Declaration and initialization of private global variables]============
-
-//=====[Declarations (prototypes) of private functions]========================
-
-//=====[Implementations of public functions]===================================
+#include "analog_in.h"
 
 void smartRoomSystemInit()
 {
     pcSerialComInit();
     rgbInit();
     matrixKeypadInit();
+    analogInInit();
 }
 
 void smartRoomSystemUpdate()
 {
+    int sensorValue = 0;
+
     pcSerialComInit();
+    sensorValue = analogInUpdate();
+    controlAnalogUpdate(sensorValue);
     //pcSerialComUpdate();
     //eventLogUpdate();
     //motorControlUpdate();

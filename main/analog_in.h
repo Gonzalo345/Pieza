@@ -1,7 +1,7 @@
 //=====[#include guards - begin]===============================================
 
-#ifndef _PC_SERIAL_COM_H_
-#define _PC_SERIAL_COM_H_
+#ifndef _ANALOG_IN_H_
+#define _ANALOG_IN_H_
 
 //=====[Libraries]=============================================================
 
@@ -11,9 +11,9 @@
 
 //=====[Declarations (prototypes) of public functions]=========================
 
-void pcSerialComInit();
-void pcSerialComUpdate(char texto, char dato);
+void analogInInit();
+int analogInUpdate();
 
 //=====[#include guards - end]=================================================
 
-#endif // _PC_SERIAL_COM_H_
+#endif // _ANALOG_IN_H_
