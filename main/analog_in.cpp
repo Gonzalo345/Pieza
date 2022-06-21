@@ -13,5 +13,4 @@ int analogInUpdate()
     int sensorValue = 0;  // value read from the pot
     // read the analog in value
     sensorValue = analogRead(analogInPin);
-    delay(100);
 }

@@ -22,7 +22,6 @@ void smartRoomSystemUpdate()
 {
     int sensorValue = 0;
 
-    pcSerialComInit();
     sensorValue = analogInUpdate();
     controlAnalogUpdate(sensorValue);
     Serial.print("Potenciometro =");
