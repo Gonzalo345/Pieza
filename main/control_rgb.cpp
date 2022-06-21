@@ -43,6 +43,7 @@ void controlTeclaUpdate()
 
 void controlAnalogUpdate(int valor)
 {   
+
     rgbUpdate( valor, valor, valor);
     
 }
