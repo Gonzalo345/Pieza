@@ -7,6 +7,8 @@
 #include "pc_serial_com.h"
 #include "matrix_keypad.h"
 #include "analog_in.h"
+#import <Arduino.h>
+
 
 void smartRoomSystemInit()
 {
@@ -23,6 +25,9 @@ void smartRoomSystemUpdate()
     pcSerialComInit();
     sensorValue = analogInUpdate();
     controlAnalogUpdate(sensorValue);
+    Serial.print("Potenciometro =");
+    Serial.print(sensorValue);
+    Serial.println();
     //pcSerialComUpdate();
     //eventLogUpdate();
     //motorControlUpdate();

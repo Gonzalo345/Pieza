@@ -12,7 +12,7 @@ void pcSerialComInit()
     Serial.println();
 }
 
-void pcSerialComUpdate(char texto, char dato)
+void pcSerialComUpdate(const char texto, char dato)
 {
     Serial.println(texto, dato);
     Serial.println();

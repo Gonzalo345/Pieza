@@ -12,7 +12,7 @@
 //=====[Declarations (prototypes) of public functions]=========================
 
 void pcSerialComInit();
-void pcSerialComUpdate(char texto, char dato);
+void pcSerialComUpdate(const char texto, char dato);
 
 //=====[#include guards - end]=================================================
 
