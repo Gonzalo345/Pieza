@@ -18,6 +18,9 @@ void rgbWhite( int blanco );
 void rgbUpdate( int rojo, int verde, int azul );
 void rgbLedOn ();
 void rgbLedOff ();
+void redUpdate( int red );
+void greenUpdate( int green );
+void blueUpdate( int blue );
 
 //=====[#include guards - end]=================================================
 

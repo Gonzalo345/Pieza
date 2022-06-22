@@ -20,13 +20,7 @@ void smartRoomSystemInit()
 
 void smartRoomSystemUpdate()
 {
-    int sensorValue = 0;
-
-    sensorValue = analogInUpdate();
-    Serial.print("Potenciometro = ");
-    Serial.print(sensorValue);
-    Serial.println();
-    controlAnalogUpdate(sensorValue);
+    controlTeclaUpdate();
     //pcSerialComUpdate();
     //eventLogUpdate();
     //motorControlUpdate();

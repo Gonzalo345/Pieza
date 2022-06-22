@@ -12,7 +12,7 @@
 //=====[Declarations (prototypes) of public functions]=========================
 
 void controlTeclaUpdate();
-void controlAnalogUpdate(int valor);
+void controlUpdate(int valor);
 
 
 //=====[#include guards - end]=================================================

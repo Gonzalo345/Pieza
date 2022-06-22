@@ -9,7 +9,7 @@
 
 #define ledAzul     D0
 #define ledVerde    D1
-#define ledRoja     D2
+#define ledRojo     D2
 
 
 //=====[Declaration of private data types]=====================================
@@ -35,11 +35,11 @@ void rgbInit()
     rgbLedOff();
     pinMode( ledVerde, OUTPUT );
     pinMode( ledAzul, OUTPUT );
-    pinMode( ledRoja, OUTPUT );
+    pinMode( ledRojo, OUTPUT );
 
     digitalWrite( ledVerde, HIGH );
     digitalWrite( ledAzul, HIGH );
-    digitalWrite( ledRoja, HIGH );
+    digitalWrite( ledRojo, HIGH );
 
 }
 
@@ -54,14 +54,28 @@ void rgbUpdate( int rojo, int verde, int azul )
 {
     analogWrite( ledAzul, rojo );
     analogWrite( ledVerde, verde );
-    analogWrite( ledRoja, azul );
+    analogWrite( ledRojo, azul );
+}
+void redUpdate( int red )
+{
+    analogWrite( ledRojo, red );
+
+}
+void greenUpdate( int green )
+{
+    analogWrite( ledVerde, green );
+}
+void blueUpdate( int blue )
+{
+    analogWrite( ledAzul, blue );
+
 }
 
 void rgbWhite( int blanco )
 {
     analogWrite( ledAzul, blanco );
     analogWrite( ledVerde, blanco );
-    analogWrite( ledRoja, blanco );
+    analogWrite( ledRojo, blanco );
 }
 
 //=====[Implementations of private functions]==================================
@@ -70,13 +84,13 @@ void rgbLedOn(){
 
     analogWrite( ledAzul, 1024 );
     analogWrite( ledVerde, 1024 );
-    analogWrite( ledRoja, 1024 );
+    analogWrite( ledRojo, 1024 );
 
 }
 void rgbLedOff(){  
 
     analogWrite( ledAzul, 0 );
     analogWrite( ledVerde, 0 );
-    analogWrite( ledRoja, 0 );
+    analogWrite( ledRojo, 0 );
 
 }
