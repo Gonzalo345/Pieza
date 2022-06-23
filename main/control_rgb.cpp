@@ -49,16 +49,16 @@ void controlTeclaUpdate()
     if( keypad.t2 == 1 ){
         while( keypad.t2 == 1 ) {keypad.tecla = matrixKeypadUpdate();}
         while( keypad.t2 == 0 ) {
-        poteValue = analogInUpdate();     
-        greenUpdate(poteValue);
+            poteValue = analogInUpdate();     
+            greenUpdate(poteValue);
         }
 
     }
     if( keypad.t3 == 1 ){
         while( keypad.t3 == 1 ) {keypad.tecla = matrixKeypadUpdate();}
         while( keypad.t3 == 0 ) {
-        poteValue = analogInUpdate();     
-        blueUpdate(poteValue);
+            poteValue = analogInUpdate();     
+            blueUpdate(poteValue);
         }
     }
 
