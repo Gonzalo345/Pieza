@@ -52,24 +52,10 @@ unsigned int matrixKeypadScan()
 {
     tecla.tecla = 0;
     
-    if(digitalRead(pin1)) { 
-        tecla.t1 = 1; 
-    }
-    else { 
-        tecla.t1 = 0; 
-    }
-    if(digitalRead(pin2)) { 
-        tecla.t2 = 1; 
-    }
-    else { 
-        tecla.t2 = 0;
-    } 
-    if(digitalRead(pin3)) { 
-        tecla.t3 = 1; 
-    }
-    else { 
-        tecla.t3 = 0;
-    } 
+    if(digitalRead(pin1)) { tecla.t1 = 1; }
+    if(digitalRead(pin2)) { tecla.t2 = 1; }
+    if(digitalRead(pin3)) { tecla.t3 = 1; }
+
     if( tecla.tecla != 0 ) {
         return tecla.tecla;
     }
