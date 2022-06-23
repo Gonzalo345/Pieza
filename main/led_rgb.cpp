@@ -9,7 +9,7 @@
 
 #define ledAzul     D0
 #define ledVerde    D1
-#define ledRojo     D2
+#define ledRojo     D5
 
 
 //=====[Declaration of private data types]=====================================
