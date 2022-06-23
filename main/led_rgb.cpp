@@ -63,14 +63,14 @@ void rgbWhite( int blanco )
 
 //=====[Implementations of private functions]==================================
 
-void rgbLedOff(){
+void rgbLedOn(){
 
     analogWrite( ledAzul, 1024 );
     analogWrite( ledVerde, 1024 );
     analogWrite( ledRojo, 1024 );
 
 }
-void rgbLedOn(){  
+void rgbLedOff(){  
 
     analogWrite( ledAzul, 0 );
     analogWrite( ledVerde, 0 );
