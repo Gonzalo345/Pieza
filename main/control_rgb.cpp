@@ -3,6 +3,7 @@
 #include "matrix_keypad.h"
 #include "led_rgb.h"
 #include "analog_in.h"
+#import <Arduino.h>
 
 //=====[Declaration of private defines]======================================
 
@@ -37,22 +38,28 @@ void controlTeclaUpdate()
     int poteValue = 0;
     keypad.tecla = matrixKeypadUpdate();
     if( keypad.t1 == 1 ){
-        poteValue = analogInUpdate();     // Tomo el valor analogico del potenciometro
-        redUpdate(poteValue);
-    //    rojo =+ 10;
-    //    if( rojo >= 1024 ) rojo = 1024;
+        while( keypad.t1 == 1 ) {keypad.tecla = matrixKeypadUpdate();}
+        while( keypad.t1 == 0 ) {
+            poteValue = analogInUpdate();     // Tomo el valor analogico del potenciometro
+            redUpdate(poteValue);
+        }
+
+
     }
     if( keypad.t2 == 1 ){
+        while( keypad.t2 == 1 ) {keypad.tecla = matrixKeypadUpdate();}
+        while( keypad.t2 == 0 ) {
         poteValue = analogInUpdate();     
         greenUpdate(poteValue);
-    //    verde =+ 10;
-    //    if( verde >= 1024 ) verde = 1024;
+        }
+
     }
     if( keypad.t3 == 1 ){
+        while( keypad.t3 == 1 ) {keypad.tecla = matrixKeypadUpdate();}
+        while( keypad.t3 == 0 ) {
         poteValue = analogInUpdate();     
         blueUpdate(poteValue);
-    //    azul =+ 10;
-    //    if( azul >= 1024 ) azul = 1024;
+        }
     }
 
 }
