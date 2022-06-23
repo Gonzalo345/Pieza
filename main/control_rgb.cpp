@@ -16,6 +16,7 @@
 unsigned int rojo = 0;
 unsigned int verde = 0;
 unsigned int azul = 0;
+
 //=====[Declaration and initialization of private global variables]============
 
 //=====[Declarations (prototypes) of private functions]========================
@@ -39,7 +40,7 @@ void controlTeclaUpdate()
     //    verde =+ 10;
     //    if( verde >= 1024 ) verde = 1024;
     }
-    if( tecla == 3 ){
+    if( tecla == 4 ){
         poteValue = analogInUpdate();     
         blueUpdate(poteValue);
     //    azul =+ 10;

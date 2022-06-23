@@ -6,31 +6,28 @@
 
 //=====[Declaration of private defines]======================================
 
-#define pinUno    D4  
-#define pinDos    D5
-#define pinTres   D6
-#define pinCuatro D7
+#define pin1    D4  
+#define pin2    D5
+#define pin3    D6
+#define pin4    D7
 
-//=====[Declaration of private data types]=====================================
-
-//=====[Declaration and initialization of public global objects]===============
-
-//=====[Declaration of external public global variables]=======================
-
-//=====[Declaration and initialization of public global variables]=============
-
-//=====[Declaration and initialization of private global variables]============
-
-//=====[Declarations (prototypes) of private functions]========================
-
-//=====[Implementations of public functions]===================================
+union tipoUnion{ /* occupies 1 bytes */
+    struct
+    {
+        unsigned int t1:1; /* occupies 1 bit */
+        unsigned int t2:1;
+        unsigned int t3:1;
+        unsigned int t4:1;/* data */
+    };
+    unsigned int tecla; /* occupies 1 bytes */
+}tecla;
 
 void matrixKeypadInit()
 {
-    pinMode( pinUno, INPUT );
-    pinMode( pinDos, INPUT );
-    pinMode( pinTres, INPUT );
-    pinMode( pinCuatro, INPUT );
+    pinMode( pin1, INPUT );
+    pinMode( pin2, INPUT );
+    pinMode( pin3, INPUT );
+    pinMode( pin4, INPUT );
 
 }
 
@@ -43,7 +40,7 @@ unsigned int matrixKeypadUpdate()
     if( keyDetected != 0 ) {
     //    while( keyReleased != 0)
     //        keyReleased = matrixKeypadScan();
-        return keyDetected;
+        return tecla.tecla;
     }
     else{
         return 0;
@@ -55,17 +52,17 @@ unsigned int matrixKeypadUpdate()
 
 unsigned int matrixKeypadScan()
 {
-    unsigned int keyDetected;
+    tecla.tecla = 0;
+    
+    if(digitalRead(pin1)) { tecla.t1 = 1; }
+    if(digitalRead(pin2)) { tecla.t2 = 1; }
+    if(digitalRead(pin3)) { tecla.t3 = 1; }
+    if(digitalRead(pin4)) { tecla.t4 = 1; }
 
-    keyDetected = 1 * digitalRead( pinUno );
-    keyDetected = 2 * digitalRead( pinDos );
-    keyDetected = 4 * digitalRead( pinTres );
-    keyDetected = 8 * digitalRead( pinCuatro );
-
-    if( keyDetected != 0 ){
-        return keyDetected;
+    if( tecla.tecla != 0 ) {
+        return tecla.tecla;
     }
-    else{
+    else {
         return 0;
     }
 }
