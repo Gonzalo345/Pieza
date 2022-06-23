@@ -33,7 +33,11 @@ union tipoUnion{ /* occupies 1 bytes */
 
 void controlTeclaInit()
 {   
-    void rgbLedOff();
+    int cero = 0;
+    delay(100);
+    redUpdate(cero);
+    blueUpdate(cero);
+    greenUpdate(cero);
     keypad.tecla = 0;
 }
 void controlTeclaUpdate()

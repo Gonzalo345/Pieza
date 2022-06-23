@@ -16,9 +16,9 @@ int analogInUpdate()
 {
   adcValue = analogRead(analogPin); /* Read the Analog Input value */
 
-  if( adcValue <= 10 ) { adcValue = 0;}
-  if( adcValue > 10 && adcValue <= 20 ) { adcValue = 1;}
-  if( adcValue > 20 && adcValue <= 30  ) { adcValue = 2;}    
+  if( adcValue <= 15 ) { adcValue = 0;}
+  if( adcValue > 15 && adcValue <= 25 ) { adcValue = 0;}
+  if( adcValue > 25 && adcValue <= 30  ) { adcValue = 2;}    
   if( adcValue > 30 && adcValue <= 40  ) { adcValue = 3;}
   if( adcValue > 40 && adcValue <= 50  ) { adcValue = 4;}
   if( adcValue > 50 && adcValue <= 60 ) { adcValue = 5;} 
