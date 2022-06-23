@@ -34,6 +34,7 @@ union tipoUnion{ /* occupies 1 bytes */
 void controlTeclaInit()
 {   
     void rgbLedOff();
+    keypad.tecla = 0;
 }
 void controlTeclaUpdate()
 {   
