@@ -7,7 +7,6 @@
 //=====[Declaration of private defines]======================================
 
 #define pin1    D2 
-#define pin2    D5
 #define pin3    D6
 #define pin4    D7
 

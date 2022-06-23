@@ -8,27 +8,10 @@
 //=====[Declaration of private defines]======================================
 
 #define ledAzul     D0
-#define ledVerde    D1
-#define ledRojo     D5
+#define ledVerde    D5
+#define ledRojo     D1
 
 
-//=====[Declaration of private data types]=====================================
-
-//=====[Declaration and initialization of public global objects]===============
-
-//DigitalOut sirenPin(PE_10);
-
-//=====[Declaration of external public global variables]=======================
-
-//=====[Declaration and initialization of public global variables]=============
-
-//=====[Declaration and initialization of private global variables]============
-
-static bool sirenState = OFF;
-
-//=====[Declarations (prototypes) of private functions]========================
-
-//=====[Implementations of public functions]===================================
 
 void rgbInit()
 {
@@ -56,17 +39,17 @@ void rgbUpdate( int rojo, int verde, int azul )
     analogWrite( ledVerde, verde );
     analogWrite( ledRojo, azul );
 }
-void redUpdate( int red )
-{
+void redUpdate( int red ){
+
     analogWrite( ledRojo, red );
 
 }
-void greenUpdate( int green )
-{
+void greenUpdate( int green ){
+
     analogWrite( ledVerde, green );
 }
-void blueUpdate( int blue )
-{
+void blueUpdate( int blue ){
+
     analogWrite( ledAzul, blue );
 
 }
