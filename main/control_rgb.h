@@ -11,6 +11,7 @@
 
 //=====[Declarations (prototypes) of public functions]=========================
 
+void controlTeclaInit();
 void controlTeclaUpdate();
 void controlUpdate(int valor);
 

@@ -16,6 +16,7 @@ void smartRoomSystemInit()
     rgbInit();
     matrixKeypadInit();
     analogInInit();
+    controlTeclaInit();
 }
 
 void smartRoomSystemUpdate()

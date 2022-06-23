@@ -26,6 +26,7 @@ void matrixKeypadInit()
     pinMode( pin1, INPUT );
     pinMode( pin2, INPUT );
     pinMode( pin3, INPUT );
+    tecla.tecla = 0;
 
 }
 

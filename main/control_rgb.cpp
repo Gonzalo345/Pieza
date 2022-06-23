@@ -29,10 +29,12 @@ union tipoUnion{ /* occupies 1 bytes */
     };
     unsigned int tecla; /* occupies 1 bytes */
 }keypad;
-//=====[Declarations (prototypes) of private functions]========================
 
-//=====[Implementations of public functions]===================================
 
+void controlTeclaInit()
+{   
+    void rgbLedOff();
+}
 void controlTeclaUpdate()
 {   
     int poteValue = 0;
