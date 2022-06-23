@@ -7,8 +7,8 @@
 //=====[Declaration of private defines]======================================
 
 #define pin1    D2 
-#define pin3    D6
-#define pin4    D7
+#define pin2    D6
+#define pin3    D7
 
 union tipoUnion{ /* occupies 1 bytes */
     struct
@@ -26,7 +26,6 @@ void matrixKeypadInit()
     pinMode( pin1, INPUT );
     pinMode( pin2, INPUT );
     pinMode( pin3, INPUT );
-    pinMode( pin4, INPUT );
 
 }
 
@@ -56,7 +55,6 @@ unsigned int matrixKeypadScan()
     if(digitalRead(pin1)) { tecla.t1 = 1; }
     if(digitalRead(pin2)) { tecla.t2 = 1; }
     if(digitalRead(pin3)) { tecla.t3 = 1; }
-    if(digitalRead(pin4)) { tecla.t4 = 1; }
 
     if( tecla.tecla != 0 ) {
         return tecla.tecla;
