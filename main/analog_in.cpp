@@ -3,7 +3,7 @@
 #import <Arduino.h>
 
 #define analogPin A0 /* ESP8266 Analog Pin ADC0 = A0 */
-#define ledPin 4 /* GPIO4 (D2) is connected to LED */
+
 
 int adcValue = 0;  /* Variable to store Output of ADC */
 
