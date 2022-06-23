@@ -17,38 +17,25 @@ unsigned int rojo = 0;
 unsigned int verde = 0;
 unsigned int azul = 0;
 
-//=====[Declaration and initialization of private global variables]============
-union tipoUnion{ /* occupies 1 bytes */
-    struct
-    {
-        unsigned int t1:1; /* occupies 1 bit */
-        unsigned int t2:1;
-        unsigned int t3:1;
-        unsigned int t4:1;/* data */
-    };
-    unsigned int tecla; /* occupies 1 bytes */
-}keypad;
-//=====[Declarations (prototypes) of private functions]========================
-
-//=====[Implementations of public functions]===================================
 
 void controlTeclaUpdate()
 {   
     int poteValue = 0;
-    keypad.tecla = matrixKeypadUpdate();
-    if( keypad.t1 == 1 ){
+    tecla.tecla = 0;
+    tecla.tecla = matrixKeypadUpdate();
+    if( tecla.t1 == 1 ){
         poteValue = analogInUpdate();     // Tomo el valor analogico del potenciometro
         redUpdate(poteValue);
     //    rojo =+ 10;
     //    if( rojo >= 1024 ) rojo = 1024;
     }
-    if( keypad.t2 == 1 ){
+    if( tecla.t2 == 1 ){
         poteValue = analogInUpdate();     
         greenUpdate(poteValue);
     //    verde =+ 10;
     //    if( verde >= 1024 ) verde = 1024;
     }
-    if( keypad.t3 == 1 ){
+    if( tecla.t3 == 1 ){
         poteValue = analogInUpdate();     
         blueUpdate(poteValue);
     //    azul =+ 10;
