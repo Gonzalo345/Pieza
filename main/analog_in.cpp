@@ -24,24 +24,26 @@ int analogInUpdate()
   if( adcValue > 100 && adcValue <= 125 ) { adcValue = 5;} 
   if( adcValue > 125 && adcValue <= 150  ) { adcValue = 6;}
   if( adcValue > 150 && adcValue <= 175  ) { adcValue = 7;}
-  if( adcValue > 200 && adcValue <= 225  ) { adcValue = 8;} 
-  if( adcValue > 225 && adcValue <= 250  ) { adcValue = 9;}
-  if( adcValue > 250 && adcValue <= 275  ) { adcValue = 10;}
-  if( adcValue > 300 && adcValue <= 325  ) { adcValue = 11;}
-  if( adcValue > 325 && adcValue <= 350  ) { adcValue = 12;}
-  if( adcValue > 350 && adcValue <= 375  ) { adcValue = 13;}
-  if( adcValue > 375 && adcValue <= 400  ) { adcValue = 14;}
-  if( adcValue > 400 && adcValue <= 425  ) { adcValue = 15;}
-  if( adcValue > 425 && adcValue <= 450  ) { adcValue = 16;} 
-  if( adcValue > 450 && adcValue <= 475  ) { adcValue = 17;} 
-  if( adcValue > 475 && adcValue <= 500  ) { adcValue = 18;} 
-  if( adcValue > 500 && adcValue <= 525  ) { adcValue = 19;} 
-  if( adcValue > 525 && adcValue <= 550  ) { adcValue = 20;} 
-  if( adcValue > 550 && adcValue <= 575  ) { adcValue = 22;} 
-  if( adcValue > 575 && adcValue <= 600  ) { adcValue = 24;} 
-  if( adcValue > 600 && adcValue <= 625  ) { adcValue = 26;} 
-  if( adcValue > 625 && adcValue <= 650  ) { adcValue = 28;} 
-  if( adcValue > 650 && adcValue <= 675  ) { adcValue = 30;} 
+  if( adcValue > 175 && adcValue <= 200  ) { adcValue = 8;} 
+  if( adcValue > 200 && adcValue <= 225  ) { adcValue = 9;}  
+  if( adcValue > 225 && adcValue <= 250  ) { adcValue = 10;}
+  if( adcValue > 250 && adcValue <= 275  ) { adcValue = 11;}
+  if( adcValue > 275 && adcValue <= 300  ) { adcValue = 12;}  
+  if( adcValue > 300 && adcValue <= 325  ) { adcValue = 13;}
+  if( adcValue > 325 && adcValue <= 350  ) { adcValue = 14;}
+  if( adcValue > 350 && adcValue <= 375  ) { adcValue = 15;}
+  if( adcValue > 375 && adcValue <= 400  ) { adcValue = 16;}
+  if( adcValue > 400 && adcValue <= 425  ) { adcValue = 17;}
+  if( adcValue > 425 && adcValue <= 450  ) { adcValue = 18;} 
+  if( adcValue > 450 && adcValue <= 475  ) { adcValue = 19;} 
+  if( adcValue > 475 && adcValue <= 500  ) { adcValue = 20;} 
+  if( adcValue > 500 && adcValue <= 525  ) { adcValue = 22;} 
+  if( adcValue > 525 && adcValue <= 550  ) { adcValue = 24;} 
+  if( adcValue > 550 && adcValue <= 575  ) { adcValue = 26;} 
+  if( adcValue > 575 && adcValue <= 600  ) { adcValue = 28;} 
+  if( adcValue > 600 && adcValue <= 625  ) { adcValue = 30;} 
+  if( adcValue > 625 && adcValue <= 650  ) { adcValue = 32;} 
+  if( adcValue > 650 && adcValue <= 675  ) { adcValue = 34;} 
   if( adcValue > 675 && adcValue <= 700  ) { adcValue = 40;} 
   if( adcValue > 700 && adcValue <= 725  ) { adcValue = 60;}
   if( adcValue > 725 && adcValue <= 750  ) { adcValue = 80;}
